@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <strong> <h1> My Profile </h1>  </strong>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+        <hr>
+        <body>
+            <div style= "float: left";> 
+            <a href="{{ url_for('static', filename = 'lab2.jpg') }}", style="float: left;"> Image </a>
+            </div>
+            <div style="float: right";> 
+            <p> <strong> Solana Salmon</strong> </p>
+            <hr>
+            <p> Today's Date: <ahref="{{ url_for('now')}}"> </a> </p>
+            <hr>
+           <p> <b> Username: </b> SolanaSalmon </p>
+            <p> <b>ID Number: </b> 620078385 </p>
+           <p> <b> Age: </b> 21 </p>
+           <p> <b> Gender: </b> Female </p>
+           
+               <hr>
+               
+           <p> I am a student. </p>
+           <div/>
+        </body>
+</html>
