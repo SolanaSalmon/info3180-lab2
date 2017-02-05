@@ -1,5 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %} My Profile {% endblock %}
+
 div{
     border: 1px;
     border-style: solid;
     border-color: black;
 }
+
+p.strong{
+    background-color: #e5e5e5;
+  }
+  
+img{
+    display: block;
+    border:4px solid #ffffff;
+    border-radius: 5px;
+    background-color:#ffffff;
+    position: relative;
+    box-shadow:0 4px 8px 0 rgba(0,0,0,0.1),0 6px 20px 0 rgba(0,0,0,0.1)!important; 
+  }
+  
+h1{ 
+    background-color: #e5e5e5;
+}
+

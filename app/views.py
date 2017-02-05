@@ -7,20 +7,23 @@ This file creates your application.
 
 from app import app
 from flask import render_template, request, redirect, url_for
-import time 
-
+import time
+import datetime 
 ###
 # Routing for your application.
 ###
 @app.route('/profile')
 def profile():
     """ Render Profile."""
-    return render_template('profile.html')
+    return render_template('profile.html', datetime=timeinfo())
     
-@app.route('/timeinfo')
 def timeinfo():
-    now=time.strftime(' %a/%d/%m/%y ')
-    return now
+    date = datetime.date.today().strftime("%d")
+    day = datetime.date.today().strftime("%A")
+    month = datetime.date.today().strftime("%B")
+    year = datetime.date.today().strftime("%Y")
+    return "{}, {} {}, {}".format(day, date, month, year)
+    
     
 
 @app.route('/')

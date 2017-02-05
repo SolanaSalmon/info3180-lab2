@@ -1,19 +1,21 @@
 <!DOCTYPE html>
+{% extends "base.html" %}
 <html>
 
     <head>
+        {% block main %}
         <strong> <h1> My Profile </h1>  </strong>
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
         <hr>
         <body>
             <div style= "float: left";> 
-            <a href="{{ url_for('static', filename = 'lab2.jpg') }}", style="float: left;"> Image </a>
+            <img src="{{ url_for('static', filename = 'image/lab2.jpg') }}" width="200" height="200", style= "float: left";>
             </div>
-            <div style="float: right";> 
+            <div style= "float: right";>
             <p> <strong> Solana Salmon</strong> </p>
             <hr>
-            <p> Today's Date: <ahref="{{ url_for('now')}}"> </a> </p>
+            <p> Today's Date: {{ datetime}}  </p>
             <hr>
            <p> <b> Username: </b> SolanaSalmon </p>
             <p> <b>ID Number: </b> 620078385 </p>
@@ -24,5 +26,6 @@
                
            <p> I am a student. </p>
            <div/>
+           {% endblock %}
         </body>
 </html>
